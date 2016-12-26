@@ -7,7 +7,6 @@
  */
 import React, {Component} from 'react';
 
-import {connect} from 'react-redux';
 import {
     StyleSheet,
     Text,
@@ -27,12 +26,14 @@ import {
 import {APP_TITLE} from './Constants';
 import {showToast} from './components/Toast';
 import HistoryDay from './components/HistoryDay'
+import HistoryDetali from './components/HistoryDetali'
 import styles from './style/SplashStyle';
 
 const RootPage = () => {
     showToast("加载成功");
     return (
         <Router>
+            <Scene key="historyDe" component={HistoryDetali} title="历史详情" />
             <Scene key="tabBar" tabs={true} tabBarStyle={styles.tabBarStyle} initial={true}>
                 <Scene key="home" component={HistoryDay} hideNavBar="true" title={APP_TITLE.TITLE_HOME}
                        icon={TabIcon}/>

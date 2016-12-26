@@ -4,6 +4,7 @@ const baseURL = 'http://v.juhe.cn';
 
 export const serviceNames = {
     historyDay:'/todayOnhistory/queryEvent.php',
+    historyDetail:'/todayOnhistory/queryDetail.php',
 }
 
 export async function invokeByPost(serviceName,data){

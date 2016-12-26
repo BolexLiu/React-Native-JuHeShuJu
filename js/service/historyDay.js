@@ -7,5 +7,12 @@ import {invokeByPost, serviceNames} from './base'
 export function historyDay(date) {
     return invokeByPost(serviceNames.historyDay, date)
 }
-
+/**
+ * 查询详情
+ * @param date
+ * @returns {*}
+ */
+export function historyDetail(date) {
+    return invokeByPost(serviceNames.historyDetail, date)
+}
 
