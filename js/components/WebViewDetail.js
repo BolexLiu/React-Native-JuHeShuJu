@@ -15,7 +15,9 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 const WebViewDetail = ({url}) => {
-
+  if(!url){
+      return<Text>正在加载中</Text>
+  }
     return (
         <WebView
             source={{uri:url}}

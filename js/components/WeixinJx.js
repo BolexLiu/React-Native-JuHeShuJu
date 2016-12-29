@@ -37,7 +37,7 @@ const WeixinJx = ({weixinJx, dispatch}) => {
                                          defaultSource={require('../images/img_def.png')}
                                           style={itemStyles.image}
                                           resizeMode={Image.resizeMode.cover}
-                                           source={{uri: item.firstImg}} >
+                                           source={{uri: item.firstImg?item.firstImg:'../images/img_def.png'}} >
                                         <View style={itemStyles.titleContainer}>
                                             <Text style={itemStyles.title}  onPress={()=>{
                                             }}>{item.title}</Text>
