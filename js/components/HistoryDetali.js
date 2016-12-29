@@ -16,10 +16,15 @@ const HistoryDetali = ({historyDay, dispatch}) => {
         return <Text>暂无数据</Text>
     }
     const {Detail} = historyDay;
+    const content = Detail.result[0];
     return (
         <ScrollView>
-            <Text>{Detail.result[0].title}</Text>
-            <Text>{Detail.result[0].content}</Text>
+            <Text>{content.title}</Text>
+            <Text>{content.content}</Text>
+            {content.picUrl?content.picUrl.map((item)=>{
+                console.log(item)
+                return  <Image style={{height:500}} key={item.id} source={{uri: item.url}} />
+            }):null}
         </ScrollView>
     )
 }

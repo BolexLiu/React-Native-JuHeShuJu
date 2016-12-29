@@ -3,7 +3,8 @@ import { composeWithDevTools } from 'remote-redux-devtools';
 import createSagaMiddleware from 'redux-saga';
 import reducers from '../reducers';
 import { DEBUG, RDEBUG } from '../Constants';
-import mySaga from '../sagas/historySaga'
+import historySaga from '../sagas/historySaga'
+import weixinSaga from '../sagas/weixinJxSaga'
 
 const logger = store => next => action => {
     if (!DEBUG || !RDEBUG) return next(action);
@@ -28,5 +29,6 @@ export const store= createStore(
         applyMiddleware(...middle),
     )
 );
+sagaMiddleware.run(weixinSaga)
+sagaMiddleware.run(historySaga)
 
-sagaMiddleware.run(mySaga)

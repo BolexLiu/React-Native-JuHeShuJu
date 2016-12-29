@@ -26,6 +26,9 @@ import {
 import {APP_TITLE} from './Constants';
 import {showToast} from './components/Toast';
 import HistoryDay from './components/HistoryDay'
+import WeixinJx from './components/WeixinJx'
+import WebViewDetail from './components/WebViewDetail'
+
 import HistoryDetali from './components/HistoryDetali'
 import styles from './style/SplashStyle';
 
@@ -33,16 +36,13 @@ const RootPage = () => {
     showToast("加载成功");
     return (
         <Router>
-            <Scene key="historyDe" component={HistoryDetali} title="历史详情" />
+            <Scene key="historyDe" component={HistoryDetali} title="历史详情"   hideNavBar="true" />
+            <Scene key="webView" component={WebViewDetail} title="查看详情"   hideNavBar="true" />
             <Scene key="tabBar" tabs={true} tabBarStyle={styles.tabBarStyle} initial={true}>
                 <Scene key="home" component={HistoryDay} hideNavBar="true" title={APP_TITLE.TITLE_HOME}
                        icon={TabIcon}/>
-                <Scene key="recommend" component={HistoryDay} hideNavBar="true"
+                <Scene key="recommend" component={WeixinJx} hideNavBar="true"
                        title={APP_TITLE.TITLE_RECOMMEND} icon={TabIcon}/>
-                <Scene key="girl" component={HistoryDay} title={APP_TITLE.TITLE_GIRL} hideNavBar="true"
-                       icon={TabIcon}/>
-                <Scene key="collect" component={HistoryDay} hideNavBar="true" title={APP_TITLE.TITLE_COLLECT}
-                       icon={TabIcon}/>
             </Scene>
         </Router>
     );

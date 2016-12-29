@@ -2,9 +2,11 @@ import request from '../utils/request'
 
 const baseURL = 'http://v.juhe.cn';
 
+
 export const serviceNames = {
     historyDay:'/todayOnhistory/queryEvent.php',
     historyDetail:'/todayOnhistory/queryDetail.php',
+    weixinJxList:'/weixin/query',
 }
 
 export async function invokeByPost(serviceName,data){

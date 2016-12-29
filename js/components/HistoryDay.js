@@ -19,11 +19,11 @@ const HistoryDay = ({historyDay,dispatch}) => {
         dispatch({type: "getHistory",data: {month:date.getMonth()+1,day:date.getDay()}})
     }
         return (
-        <ScrollView>
+        <ScrollView style={styles.container} >
             <Button title={`${month}月${day}日`} onPress={()=>opneDatePicker(dispatch)}/>
             {
                 data?data.result.map((item)=>{
-                        return <Text key={item.e_id} onPress={()=>{
+                        return <Text  style={styles.itemViewContainer} key={item.e_id} onPress={()=>{
                                Actions.historyDe({});
                            return dispatch({type:"getHistoryDetail",data:{id:item.e_id}})
                         }}>{item.title}</Text>
@@ -54,6 +54,50 @@ const maptopr = (store) => {
         historyDay: store.historyDay,
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#f0f0f0',
+        marginBottom:90,
+    },
+    footerContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
+    itemViewContainer: {
+        padding: 10,
+        borderBottomColor: '#b1b1b1',
+        borderBottomWidth: 0.4,
+    },
+    line2ItemViewContainer: {
+        flexDirection: 'row',
+    },
+    title: {
+        fontSize: 16,
+        marginBottom: 8,
+        color: '#000000',
+    },
+    author: {
+        flex: 1,
+        fontSize: 14,
+        color: '#999999',
+    },
+    time: {
+        fontSize: 14,
+        color: '#999999',
+        textAlign: 'right',
+    },
+    separator: {
+        height: 1,
+        // backgroundColor: '#cccccc',
+        borderBottomWidth: 0.5,
+        borderColor: '#cccccc',
+    },
+});
 
 
 

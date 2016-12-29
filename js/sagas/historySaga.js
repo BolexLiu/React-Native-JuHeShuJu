@@ -14,10 +14,10 @@ function* getHistoryDetail(action) {
     yield put({type: GET_HISTORY_DETALI,  Detail});
 }
 
-function* mySaga() {
+function* historySaga() {
     yield takeLatest("getHistory", getHistory);
     yield takeLatest("getHistoryDetail", getHistoryDetail);
 
 }
-export default mySaga
+export default historySaga
 
