@@ -29,11 +29,11 @@ react-native run-android 来启动
 
 ---
 
-[日期](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/rili.jpg)
+![日期](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/rili.jpg)
 
-[列表](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/list.jpg)
+![列表](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/list.jpg)
 
-[详情](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/xiangqing.jpg)
+![详情](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/xiangqing.jpg)
 
 #License
 
