@@ -16,6 +16,7 @@ react-native run-android 来启动
 1.今天历史
 2.微信热文
 
+
 ### 涉及到的知识点：
 
 - [X] react 
@@ -25,6 +26,14 @@ react-native run-android 来启动
 - [X] react-native-spinkit
 - [X] redux-saga
 
+
+---
+
+[日期](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/rili.jpg)
+
+[列表](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/list.jpg)
+
+[详情](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/xiangqing.jpg)
 
 #License
 
