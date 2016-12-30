@@ -1,5 +1,9 @@
 # React-Native-JuHeShuJu
 
+[![NPM version](https://img.shields.io/badge/npm-3.10.9-green.svg)](https://github.com/jeasinlee/Gank2016/)
+[![react-native-router-flux version](https://img.shields.io/badge/react--native--router--flux-3.37.0-brightgreen.svg)](https://github.com/aksonov/react-native-router-flux)
+[![react--native version](https://img.shields.io/badge/react--native-0.39.2-green.svg)](https://github.com/facebook/react-native/)
+
 这是一个react-native开发的聚合数据查询app
 
 在环境配置完整的情况下你可以使用
@@ -7,6 +11,20 @@
 npm install 安装依赖
 
 react-native run-android 来启动
+##功能
+
+1.今天历史
+2.微信热文
+
+### 涉及到的知识点：
+
+- [X] react 
+- [X] redux
+- [X] realm
+- [X] react-native-router-flux
+- [X] react-native-spinkit
+- [X] redux-saga
+
 
 #License
 
