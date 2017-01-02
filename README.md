@@ -25,8 +25,7 @@ react-native run-android 来启动
 - [X] react-native-router-flux
 - [X] react-native-spinkit
 - [X] redux-saga
-
-
+- [X] es6
 ---
 
 ![日期](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/rili.jpg)
