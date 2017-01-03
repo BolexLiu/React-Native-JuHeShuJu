@@ -16,7 +16,7 @@ import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux'
 import ImageView from './ImageView'
 const WeixinJx = ({weixinJx, dispatch}) => {
-    const {pno, ps, isInit, weixinList}= weixinJx;
+    const {pno, ps, isInit, weixinList, isLodinMore}= weixinJx;
     if (isInit) {
         dispatch({type: "getweixinJxList", data: {pno: pno, ps: ps}})
     }
@@ -24,28 +24,36 @@ const WeixinJx = ({weixinJx, dispatch}) => {
         return <Text>加载中...</Text>
     }
     return (
-        <View style={{ flex: 1,
-        flexDirection: 'column',}}>
+        <View style={{
+            flex: 1,
+            flexDirection: 'column',
+        }}>
             <ListView
                 dataSource={weixinList}
-                renderRow={(item) =>{
-                      return <TouchableOpacity
-                      style={{flex: 1}}
-                      key={item.firstImg} activeOpacity={0.8}
-                      onPress={ ()=>{ Actions.webView({ url: item.url}) }}>
-                                        <ImageView
-                                         defaultSource={require('../images/img_def.png')}
-                                          style={itemStyles.image}
-                                          resizeMode={Image.resizeMode.cover}
-                                           source={{uri: item.firstImg?item.firstImg:'../images/img_def.png'}} >
-                                        <View style={itemStyles.titleContainer}>
-                                            <Text style={itemStyles.title}  onPress={()=>{
-                                            }}>{item.title}</Text>
-                                         </View>
-                                         </ImageView>
-                             </TouchableOpacity>
+                automaticallyAdjustContentInsets={false}
+                onEndReachedThreshold={5}
+                renderRow={(item) => {
+                    return <TouchableOpacity
+                        style={{flex: 1}}
+                        key={item.firstImg} activeOpacity={0.8}
+                        onPress={ ()=> {
+                            Actions.webView({url: item.url})
+                        }}>
+                        <ImageView
+                            defaultSource={require('../images/img_def.png')}
+                            style={itemStyles.image}
+                            resizeMode={Image.resizeMode.cover}
+                            source={{uri: item.firstImg ? item.firstImg : '../images/img_def.png'}}>
+                            <View style={itemStyles.titleContainer}>
+                                <Text style={itemStyles.title} onPress={()=> {
+                                }}>{item.title}</Text>
+                            </View>
+                        </ImageView>
+                    </TouchableOpacity>
 
-                      } }
+
+                } }
+                onEndReached={()=>isLodinMore ? null : dispatch({type: "getweixinJxList", data: {pno: pno, ps: ps}})}
             />
         </View>
 
