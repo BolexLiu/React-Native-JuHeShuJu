@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     itemViewContainer: {
         fontSize: 18,
         padding: 10,
+        color:'#888888',
         borderBottomColor: '#b1b1b1',
         borderBottomWidth: 0.4,
     },
