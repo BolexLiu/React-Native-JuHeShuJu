@@ -25,11 +25,11 @@ import {
 } from 'react-native-router-flux';
 import {APP_TITLE} from './Constants';
 import {showToast} from './components/Toast';
-import HistoryDay from './components/HistoryDay'
-import WeixinJx from './components/WeixinJx'
-import WebViewDetail from './components/WebViewDetail'
+import HistoryDay from './pages/HistoryDay'
+import WeixinJx from './pages/WeixinJx'
+import WebViewDetail from './pages/WebViewDetail'
 
-import HistoryDetali from './components/HistoryDetali'
+import HistoryDetali from './pages/HistoryDetali'
 import styles from './style/SplashStyle';
 
 const RootPage = () => {
@@ -39,10 +39,10 @@ const RootPage = () => {
             <Scene key="historyDe" component={HistoryDetali} title="历史详情"   hideNavBar="true" />
             <Scene key="webView" component={WebViewDetail} title="查看详情"   hideNavBar="true" />
             <Scene key="tabBar" tabs={true} tabBarStyle={styles.tabBarStyle} initial={true}>
-                <Scene key="home" component={HistoryDay} hideNavBar="true" title={APP_TITLE.TITLE_HOME}
+                <Scene key="home" component={HistoryDay} hideNavBar="true" title={APP_TITLE.TITLE_HISTORY}
                        icon={TabIcon}/>
                 <Scene key="recommend" component={WeixinJx} hideNavBar="true"
-                       title={APP_TITLE.TITLE_RECOMMEND} icon={TabIcon}/>
+                       title={APP_TITLE.TITLE_WEIXIN} icon={TabIcon}/>
             </Scene>
         </Router>
     );
@@ -51,13 +51,13 @@ const RootPage = () => {
 const TabIcon = ({title, selected}) => {
     let src;
     switch (title) {
-        case APP_TITLE.TITLE_HOME:
+        case APP_TITLE.TITLE_HISTORY:
             if (selected)
                 src = require('./images/tabicon/ic_home_tab_gank_cur.png');
             else
                 src = require('./images/tabicon/ic_home_tab_gank.png');
             break;
-        case APP_TITLE.TITLE_RECOMMEND:
+        case APP_TITLE.TITLE_WEIXIN:
             if (selected)
                 src = require('./images/tabicon/ic_home_tab_rec_cur.png');
             else
@@ -79,7 +79,7 @@ const TabIcon = ({title, selected}) => {
     return (
         <View style={{flex:1, alignItems:'center', }}>
             <Image source={src}/>
-            <Text style={{flex:1, color:selected?'green':'black',fontSize:20,}}>{title}</Text>
+            <Text style={{flex:1, color:selected?'#6495ED':'#bfbfbf',fontSize:18,}}>{title}</Text>
         </View>
     )
 }

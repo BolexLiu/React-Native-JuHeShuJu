@@ -14,20 +14,32 @@ import {
     WebView
 } from 'react-native';
 import {connect} from 'react-redux';
-const WebViewDetail = ({url}) => {
+import CustomTitleBarComp from '../components/CustomTitleBarComp'
+import {Actions} from 'react-native-router-flux';
+const WebViewDetail = ({url,title}) => {
   if(!url){
       return<Text>正在加载中</Text>
   }
     return (
+   <View style={{flex:1}}>
+       <CustomTitleBarComp
+       title={title}
+       onLeftBtnClick={_onBack}
+         />
         <WebView
             source={{uri:url}}
             javaScriptEnabled={true}
             domStorageEnabled={true}
             decelerationRate='normal'
         />
+   </View>
 
     )
 
+}
+_onBack=()=>{
+    Actions.pop();
+    return true;
 }
 
 
