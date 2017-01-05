@@ -16,6 +16,13 @@ import {
 import {connect} from 'react-redux';
 import CustomTitleBarComp from '../components/CustomTitleBarComp'
 import {Actions} from 'react-native-router-flux';
+/**
+ * 微信详情webview页面
+ * @param url
+ * @param title
+ * @returns {XML}
+ * @constructor
+ */
 const WebViewDetail = ({url,title}) => {
   if(!url){
       return<Text>正在加载中</Text>

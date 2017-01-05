@@ -13,6 +13,13 @@ import {
 import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux';
 import CustomTitleBarComp from '../components/CustomTitleBarComp'
+/**
+ *  历史详情页面
+ * @param historyDay
+ * @param dispatch
+ * @returns {XML}
+ * @constructor
+ */
 const HistoryDetali = ({historyDay, dispatch}) => {
     if (!historyDay.Detail || !historyDay.Detail.result) {
         return <Text>暂无数据</Text>

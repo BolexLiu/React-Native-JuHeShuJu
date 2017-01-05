@@ -12,6 +12,14 @@ import {
 import Button from 'react-native-button';
 import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux'
+
+/**
+ * 历史列表页
+ * @param historyDay
+ * @param dispatch
+ * @returns {XML}
+ * @constructor
+ */
 const HistoryDay = ({historyDay, dispatch}) => {
     const {isInit, data, month, day}= historyDay;
     const date = new Date();

@@ -7,10 +7,10 @@ export const serviceNames = {
     historyDay:'/todayOnhistory/queryEvent.php',
     historyDetail:'/todayOnhistory/queryDetail.php',
     weixinJxList:'/weixin/query',
+    news:'/toutiao/index'
 }
 
 export async function invokeByPost(serviceName,data){
-    // console.log(methodName,data)
     const apiURL = `${baseURL}${serviceName}?${jsonToget(data)}`
     return request(apiURL)
 }

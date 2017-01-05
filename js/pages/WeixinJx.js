@@ -15,6 +15,13 @@ import {
 import {connect} from 'react-redux';
 import {Actions} from 'react-native-router-flux'
 import ImageView from '../components/ImageView'
+/**
+ * 微信列表页
+ * @param weixinJx
+ * @param dispatch
+ * @returns {XML}
+ * @constructor
+ */
 const WeixinJx = ({weixinJx, dispatch}) => {
     const {pno, ps, isInit, weixinList, isLodinMore}= weixinJx;
     if (isInit) {
