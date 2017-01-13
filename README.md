@@ -13,7 +13,6 @@ npm install 安装依赖
 react-native run-android 来启动
 
 ##功能
-
 1.今天历史
 2.微信热文
 
@@ -30,6 +29,7 @@ react-native run-android 来启动
 - 0.4 今日历史详情 重新图文并茂排版
 - 0.5   美化整体UI 调整应用为全屏展示
 - 0.6  添加引导页 添加关于我
+
 ### 涉及到的知识点：
 
 - [X] react 
