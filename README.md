@@ -17,6 +17,10 @@ react-native run-android 来启动
 1.今天历史
 2.微信热文
 
+##体验下载链接
+![启动](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/d.png)
+[https://fir.im/bolexjh](https://fir.im/bolexjh)
+
 ###更新日志
 
 - 0.1 搭建基本框架 调通接口
