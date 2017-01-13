@@ -21,12 +21,12 @@ const splash = ({
         marginBottom: 20,
     },
     text2: {
-        color: '#D3D3D3',
+        color: '#ffffff',
         fontSize: 30,
         marginBottom: 10,
     },
     text3: {
-        color: '#D3D3D3',
+        color: '#ffffff',
         fontSize: 30,
         marginTop: 30,
     },

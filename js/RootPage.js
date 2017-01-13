@@ -28,7 +28,7 @@ import {showToast} from './components/Toast';
 import HistoryDay from './pages/HistoryDay'
 import WeixinJx from './pages/WeixinJx'
 import WebViewDetail from './pages/WebViewDetail'
-
+import Me from './pages/Me'
 import HistoryDetali from './pages/HistoryDetali'
 import styles from './style/SplashStyle';
 
@@ -36,13 +36,20 @@ const RootPage = () => {
     showToast("加载成功");
     return (
         <Router>
-            <Scene key="historyDe" component={HistoryDetali} title="历史详情"   hideNavBar="true" />
-            <Scene key="webView" component={WebViewDetail} title="查看详情"   hideNavBar="true" />
-            <Scene key="tabBar" tabs={true} tabBarStyle={styles.tabBarStyle} initial={true}>
-                <Scene key="home" component={HistoryDay} hideNavBar="true" title={APP_TITLE.TITLE_HISTORY}
+
+            <Scene key="historyDe" component={HistoryDetali} title="历史详情" hideNavBar="true"/>
+            <Scene key="webView" component={WebViewDetail} title="查看详情" hideNavBar="true"/>
+            <Scene key="tabBar" tabs={true} tabBarStyle={styles.tabBarStyle} hideNavBar="true"
+                   tabTitleStyle={{backgroundColor: '#6495ED',}} initial={true}>
+                <Scene key="home" component={HistoryDay} title={APP_TITLE.TITLE_HISTORY}
+                       hideNavBar="true"
                        icon={TabIcon}/>
-                <Scene key="recommend" component={WeixinJx} hideNavBar="true"
+                <Scene key="recommend" component={WeixinJx}
+                       hideNavBar="true"
                        title={APP_TITLE.TITLE_WEIXIN} icon={TabIcon}/>
+                <Scene key="me" component={Me}
+                       hideNavBar="true"
+                       title={APP_TITLE.TITLE_ABOUT_ME} icon={TabIcon}/>
             </Scene>
         </Router>
     );
@@ -63,23 +70,17 @@ const TabIcon = ({title, selected}) => {
             else
                 src = require('./images/tabicon/ic_home_tab_rec.png');
             break;
-        case APP_TITLE.TITLE_GIRL:
+        case APP_TITLE.TITLE_ABOUT_ME:
             if (selected)
-                src = require('./images/tabicon/ic_home_tab_girl_cur.png');
+                src = require('./images/tabicon/ic_about_me_c_cur.png');
             else
-                src = require('./images/tabicon/ic_home_tab_girl.png');
-            break;
-        case APP_TITLE.TITLE_COLLECT:
-            if (selected)
-                src = require('./images/tabicon/ic_home_tab_collect_cur.png');
-            else
-                src = require('./images/tabicon/ic_home_tab_collect.png');
+                src = require('./images/tabicon/ic_about_me_c.png');
             break;
     }
     return (
-        <View style={{flex:1, alignItems:'center', }}>
+        <View style={{flex: 1, alignItems: 'center',}}>
             <Image source={src}/>
-            <Text style={{flex:1, color:selected?'#6495ED':'#bfbfbf',fontSize:18,}}>{title}</Text>
+            <Text style={{flex: 1, color: selected ? '#6495ED' : '#bfbfbf', fontSize: 18,}}>{title}</Text>
         </View>
     )
 }

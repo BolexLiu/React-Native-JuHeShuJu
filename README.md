@@ -4,13 +4,14 @@
 [![react-native-router-flux version](https://img.shields.io/badge/react--native--router--flux-3.37.0-brightgreen.svg)](https://github.com/aksonov/react-native-router-flux)
 [![react--native version](https://img.shields.io/badge/react--native-0.39.2-green.svg)](https://github.com/facebook/react-native/)
 
-这是一个react-native开发的聚合数据查询app
+这是一个react-native开发的聚合数据查询app,除特殊需要用到生命周期的组件以外其余的组件和框架结构都采用ES6语法.
 
 在环境配置完整的情况下你可以使用
 
 npm install 安装依赖
 
 react-native run-android 来启动
+
 ##功能
 
 1.今天历史
@@ -23,7 +24,7 @@ react-native run-android 来启动
 - 0.3 美化UI增加CustomTitleBar
 - 0.4 今日历史详情 重新图文并茂排版
 - 0.5   美化整体UI 调整应用为全屏展示
-
+- 0.6  添加引导页 添加关于我
 ### 涉及到的知识点：
 
 - [X] react 
@@ -35,10 +36,11 @@ react-native run-android 来启动
 - [X] es6
 
 ---
+![启动](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/7.jpg) ![关于](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/5.jpg)
 
 ![列表](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/1.jpg) ![日历](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/2.jpg)
 
-![列表](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/3.jpg) ![详情](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/4.jpg)
+![列表](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/8.jpg) ![详情](https://github.com/BolexLiu/React-Native-JuHeShuJu/blob/master/6.jpg)
 
 #License
 
