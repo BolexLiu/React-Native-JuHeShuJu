@@ -24,7 +24,7 @@ import {
     Reducer
 } from 'react-native-router-flux';
 import {APP_TITLE} from './Constants';
-import {showToast} from './components/Toast';
+import MyToast from './components/MyTost';
 import HistoryDay from './pages/HistoryDay'
 import WeixinJx from './pages/WeixinJx'
 import WebViewDetail from './pages/WebViewDetail'
@@ -33,7 +33,7 @@ import HistoryDetali from './pages/HistoryDetali'
 import styles from './style/SplashStyle';
 
 const RootPage = () => {
-    showToast("加载成功");
+    MyToast.show("加载成功1",1000);
     return (
         <Router>
 
