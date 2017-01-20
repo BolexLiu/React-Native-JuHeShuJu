@@ -12,6 +12,9 @@ npm install 安装依赖
 
 react-native run-android 来启动
 
+交流QQ群:110801914
+
+
 ##功能
 1.今天历史
 2.微信热文
